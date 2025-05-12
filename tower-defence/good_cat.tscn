@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvpaxbpm452s4"]
+
+[ext_resource type="Texture2D" uid="uid://bavfdfbi3d312" path="res://Art/Good Cat.png" id="1_oohgk"]
+[ext_resource type="Script" uid="uid://djkiljnfiiaff" path="res://good_cat.gd" id="1_tjv7x"]
+[ext_resource type="Script" uid="uid://bdloxgd6jehj7" path="res://bullet_spawner.gd" id="2_eoxo4"]
+[ext_resource type="Script" uid="uid://2m3atm8bfxuu" path="res://range.gd" id="4_j1rei"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j01mj"]
+radius = 952.374
+
+[node name="Good Cat" type="Node2D"]
+script = ExtResource("1_tjv7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-3.05176e-05, -148)
+scale = Vector2(0.189749, 0.189749)
+texture = ExtResource("1_oohgk")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[node name="Bullet Spawner" type="Marker2D" parent="."]
+script = ExtResource("2_eoxo4")
+
+[node name="Range" type="Area2D" parent="."]
+script = ExtResource("4_j1rei")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+position = Vector2(-17, -120)
+shape = SubResource("CircleShape2D_j01mj")
+
+[connection signal="area_entered" from="Range" to="." method="_on_range_area_entered"]
+[connection signal="area_exited" from="Range" to="." method="_on_range_area_exited"]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bwssmuy0561oa"]
+
+[ext_resource type="Script" uid="uid://dyf8ytpnh3w2t" path="res://control.gd" id="1_62e2m"]
+[ext_resource type="Texture2D" uid="uid://bavfdfbi3d312" path="res://Art/Good Cat.png" id="2_qtu10"]
+[ext_resource type="Script" uid="uid://dr0oxaep5h5co" path="res://build_tower.gd" id="3_ee4bf"]
+[ext_resource type="Script" uid="uid://b274v1ss4j2f7" path="res://good_cat_tower_preview.gd" id="4_ee4bf"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_62e2m")
+
+[node name="build_tower" type="Button" parent="."]
+layout_mode = 0
+offset_right = 1904.0
+offset_bottom = 1759.0
+scale = Vector2(0.1, 0.1)
+icon = ExtResource("2_qtu10")
+script = ExtResource("3_ee4bf")
+
+[node name="GoodCat_Tower_preview" type="Sprite2D" parent="build_tower"]
+visible = false
+modulate = Color(1, 1, 1, 0.443137)
+position = Vector2(3720, 1060)
+scale = Vector2(1.00014, 1.00014)
+texture = ExtResource("2_qtu10")
+script = ExtResource("4_ee4bf")
+
+[connection signal="pressed" from="build_tower" to="build_tower" method="_on_pressed"]

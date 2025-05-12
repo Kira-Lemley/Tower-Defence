@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://desh28domweba"]
+
+[ext_resource type="Script" uid="uid://cfik36ab7pmlv" path="res://evil_cat_spawner.gd" id="1_qajp8"]
+
+[node name="Evil cat spawner" type="Marker2D"]
+script = ExtResource("1_qajp8")

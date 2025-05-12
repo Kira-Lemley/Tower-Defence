@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbypp3kcwmsri"]
+
+[ext_resource type="PackedScene" uid="uid://bvpaxbpm452s4" path="res://good_cat.tscn" id="1_fkkic"]
+[ext_resource type="PackedScene" uid="uid://dhg3u5wrw4e" path="res://enemy.tscn" id="2_t5d6x"]
+[ext_resource type="PackedScene" uid="uid://desh28domweba" path="res://evil_cat_spawner.tscn" id="3_jqjfh"]
+[ext_resource type="PackedScene" uid="uid://bwssmuy0561oa" path="res://control.tscn" id="4_cim0o"]
+
+[node name="Demo Level" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
+
+[node name="Good Cat" parent="." instance=ExtResource("1_fkkic")]
+position = Vector2(1145, 340)
+
+[node name="Evil Cat" parent="." instance=ExtResource("2_t5d6x")]
+position = Vector2(80, -25)
+
+[node name="Evil Cat2" parent="." instance=ExtResource("2_t5d6x")]
+position = Vector2(32, 353)
+
+[node name="Evil cat spawner" parent="." instance=ExtResource("3_jqjfh")]
+position = Vector2(-8, 296)
+
+[node name="Control" parent="." instance=ExtResource("4_cim0o")]
+offset_left = 800.0
+offset_top = 400.0
+offset_right = 800.0
+offset_bottom = 400.0
