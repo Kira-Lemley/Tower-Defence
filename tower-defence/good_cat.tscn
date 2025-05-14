@@ -21,9 +21,12 @@ texture = ExtResource("1_oohgk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 
 [node name="Bullet Spawner" type="Marker2D" parent="."]
+position = Vector2(-106, -148)
 script = ExtResource("2_eoxo4")
 
 [node name="Range" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("4_j1rei")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]

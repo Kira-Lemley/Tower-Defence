@@ -4,7 +4,7 @@ var speed
 var vector
 
 func _ready():
-	speed = 50
+	speed = 400
 	vector = Vector2(1,0)
 	
 func _process(delta):

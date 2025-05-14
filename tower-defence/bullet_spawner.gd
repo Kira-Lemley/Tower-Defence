@@ -16,7 +16,7 @@ func _process(delta):
 	if get_parent().target != null:
 		var new_bolt = bolt_scene.instantiate()
 	
-		time_elapsed = time_elapsed + 1
+		time_elapsed = time_elapsed + delta
 	
 		self.look_at(get_parent().target.global_position)
 		if time_elapsed >= 0.5:

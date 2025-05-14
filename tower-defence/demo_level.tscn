@@ -13,11 +13,8 @@ format = 2
 [node name="Good Cat" parent="." instance=ExtResource("1_fkkic")]
 position = Vector2(1145, 340)
 
-[node name="Evil Cat" parent="." instance=ExtResource("2_t5d6x")]
-position = Vector2(80, -25)
-
 [node name="Evil Cat2" parent="." instance=ExtResource("2_t5d6x")]
-position = Vector2(32, 353)
+position = Vector2(-298, 348)
 
 [node name="Evil cat spawner" parent="." instance=ExtResource("3_jqjfh")]
 position = Vector2(-8, 296)

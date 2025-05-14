@@ -13,5 +13,6 @@ func _process(delta):
 
 func _on_area_entered(area: Area2D) -> void:
 	health = health - 20
+	area.queue_free()
 	if health < 1: 
 		queue_free()
